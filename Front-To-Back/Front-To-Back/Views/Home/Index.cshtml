@@ -9,38 +9,20 @@
 
             <div class="carousel-inner" role="listbox">
 
+
                 <!-- Slide 1 -->
-                <div class="carousel-item active" style="background-image: url(/assets/img/slide/slide-1.jpg)">
-                    <div class="carousel-container">
-                        <div class="carousel-content">
-                            <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Eterna</span></h2>
-                            <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                            <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
+                @foreach (var item in Model.Slider)
+                {
+                    <div class="carousel-item active" style="background-image: url(/assets/img/slide/@item.BackgroundImg)">
+                        <div class="carousel-container">
+                            <div class="carousel-content">
+                                <h2 class="animate__animated animate__fadeInDown">@item.Title2<span>@item.Title1</span></h2>
+                                <p class="animate__animated animate__fadeInUp">@item.Description</p>
+                                <a href="" class="btn-get-started animate__animated animate__fadeInUp">@item.Button</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Slide 2 -->
-                <div class="carousel-item" style="background-image: url(/assets/img/slide/slide-2.jpg)">
-                    <div class="carousel-container">
-                        <div class="carousel-content">
-                            <h2 class="animate__animated fanimate__adeInDown">Lorem <span>Ipsum Dolor</span></h2>
-                            <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                            <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slide 3 -->
-                <div class="carousel-item" style="background-image: url(/assets/img/slide/slide-3.jpg)">
-                    <div class="carousel-container">
-                        <div class="carousel-content">
-                            <h2 class="animate__animated animate__fadeInDown">Sequi ea <span>Dime Lara</span></h2>
-                            <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                            <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
-                        </div>
-                    </div>
-                </div>
+                }
 
             </div>
 
@@ -67,13 +49,13 @@
                 {
                     <div class="col-lg-4">
                         <div class="icon-box">
-                            <i class="bi bi-card-checklist"></i>
+                            <i class="@item.Icon"></i>
                             <h3><a href="">@item.Name</a></h3>
                             <p>@item.Description</p>
                         </div>
                     </div>
                 }
-               
+
             </div>
 
         </div>
@@ -116,7 +98,7 @@
                 {
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                         <div class="icon-box">
-                            <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                            <div class="icon"><i class="@item.Icon"></i></div>
                             <h4><a href="">@item.Name</a></h4>
                             <p>@item.Description</p>
                         </div>

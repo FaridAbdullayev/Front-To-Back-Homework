@@ -6,5 +6,6 @@ namespace Front_To_Back.ViewModels
     {
         public List<Feature> Features {  get; set; }
         public List<Service> Services { get; set; }
+        public List<HomeSlider> Slider { get; set; }
     }
 }

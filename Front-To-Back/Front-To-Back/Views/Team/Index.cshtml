@@ -25,17 +25,17 @@
                 {
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                         <div class="member">
-                            <img src="~/assets/img/team/team-1.jpg" alt="">
+                            <img src="~/assets/img/team/@item.Image" alt="">
                             <h4>@item.Name</h4>
                             <span>@item.Work</span>
                             <p>
                                 @item.Description
                             </p>
                             <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
+                                <a href="@item.TwiterUrl"><i class="bi bi-twitter"></i></a>
+                                <a href="@item.FacebookUrl"><i class="bi bi-facebook"></i></a>
+                                <a href="@item.InstagramUrl"><i class="bi bi-instagram"></i></a>
+                                <a href="@item.LinkedinUrl"><i class="bi bi-linkedin"></i></a>
                             </div>
                         </div>
                     </div>
